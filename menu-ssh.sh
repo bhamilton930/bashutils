@@ -21,16 +21,16 @@
 #ssh 192.168.1.210 # compute node 10
 #---------------------------------#
 
-ST='1'
-CDM=echo ` `
-M1="Please select your compute node [01-10]"
-M2="MASTER node options are  [11 and 12]"
+ST='1' 		#sleep timer adjustable variable 
+WSG=echo ` `	#white space generator
+M1="Please select your compute node [01-10]" 	#message header #1
+M2="MASTER node options are  [11 and 12]"	#message header #2
 
 while :;do clear	
 	
 		PS3='Choice:  ' #get the user's input for options 1-12
-		$CDM; echo $M1;
-		echo $M2; $CDM
+		$WSG; echo $M1;
+		echo $M2; $WSG
 
 				options=("Node 1" 
 				         "Node 2"
