@@ -4,19 +4,18 @@ from fabric.api import *
 def cluster_all():
         env.user  = 'pi'
         env.hosts = [
-        'pi01',    #pi01 eth0
-        'pi02',    #pi02 eth0
-        'pi03',    #pi03 eth0
-        'pi04',    #pi04 eth0
-        'pi05',    #pi05 eth0
-        'pi06',    #pi06 eth0
-        'pi07',    #pi07 eth0
-        'pi08',    #pi08 eth0
-        'pi09',    #pi09 eth0
-        'pi10',    #pi10 eth0  #failed sd #host hard down
-        'pi11',    #pi11 eth0
-#        'batman',     #batman   #portable desktop box
-#        'master01', #master01   #master controller node
+        'pi01',     #pi01 eth0
+        'pi02',     #pi02 eth0
+        'pi03',     #pi03 eth0
+        'pi04',     #pi04 eth0
+        'pi05',     #pi05 eth0
+        'pi06',     #pi06 eth0
+        'pi07',     #pi07 eth0
+        'pi08',     #pi08 eth0
+        'pi09',     #pi09 eth0
+        'pi10',     #pi10 eth0
+        'pi11',     #pi11 eth0
+        'pi12',     #pi12 eth0 
     ]        
 
     
@@ -31,6 +30,7 @@ def cluster01_prod():
         'pi03',
         'pi04',
         'pi05',
+        'pi06'
     ]   
 
     
@@ -40,29 +40,29 @@ def cluster01_prod():
 def cluster02_prod():
         env.user = 'pi' 
         env.hosts = [
-        'pi06',
         'pi07',
         'pi08',
         'pi09',
-#        'pi10', #failed sd #host hard down
+        'pi10', 
+        'pi11',
     ]
 
-    
-    
-    
+        
+        
+        
         
 def cluster03_stage():
         env.user = 'pi' 
         env.hosts = [
-        'pi11'
+        'pi12',
     ]
 
-def clients():
+def clients_all():
 #env.user = 'pi'
         env.hosts = [
-        'batman',
         'master01',
-            
+        'batman',
+        'robin',            
     ]
 
 # --- general host configuration and commands --- ##
