@@ -88,12 +88,12 @@ def smb_umountall():
     sudo('umount /storage/scripts/')
 
 def smb_mountall():
-    sudo('mount //master01/bigpi /storage/bigpi/ -o username=pi,password=H@ppyplac3')
-    sudo('mount //master01/documents /storage/documents/ -o username=pi,password=H@ppyplac3')
-    sudo('mount //master01/downloads /storage/downloads/ -o username=pi,password=H@ppyplac3')
-    sudo('mount //master01/pictures /storage/pictures/ -o username=pi,password=H@ppyplac3')
-    sudo('mount //master01/scripts /storage/scripts/ -o username=pi,password=H@ppyplac3')
-    sudo('mount //master01/music /storage/music/ -o username=pi,password=H@ppyplac3')
+    sudo('mount //master01/bigpi /storage/bigpi/ -o username=pi,password=mypassword)
+    sudo('mount //master01/documents /storage/documents/ -o username=pi,password=mypassword')
+    sudo('mount //master01/downloads /storage/downloads/ -o username=pi,password=mypassword')
+    sudo('mount //master01/pictures /storage/pictures/ -o username=pi,password=mypassword')
+    sudo('mount //master01/scripts /storage/scripts/ -o username=pi,password=mypassword')
+    sudo('mount //master01/music /storage/music/ -o username=pi,password=mypassword')
 
 def smb_mountcheck():
     run('mount |egrep "master|192" |wc -l')
